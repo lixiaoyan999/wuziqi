@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-style: normal;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: url("../img/timg.jpg") center/cover;
+  overflow: hidden;
+}
+
+.qipan {
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.5);
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.qipan .qizi {
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  float: left;
+  position: relative;
+  z-index: 999;
+}
+.qipan .hei {
+  background-color: #000;
+}
+.qipan .bai {
+  background-color: #EFEFEF;
+}
+.qipan > i {
+  width: 560px;
+  height: 1px;
+  background-color: #333333;
+  position: absolute;
+  left: 20px;
+  transform: translate3d(-1000px, -1000px, 0);
+}
+.qipan > b {
+  height: 560px;
+  width: 1px;
+  background-color: #333333;
+  position: absolute;
+  top: 20px;
+  transform: translate3d(-1000px, -1000px, 0);
+}
+.qipan .pointer {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  background-color: #000000;
+  position: absolute;
+  transform: translate3d(-1000px, -1000px, 0);
+  z-index: 99;
+}
+.qipan div:nth-of-type(1) {
+  left: 140px;
+  top: 140px;
+  animation: pointer 2s ease 600ms forwards;
+}
+.qipan div:nth-of-type(2) {
+  left: 460px;
+  top: 140px;
+  animation: pointer 2s ease 600ms forwards;
+}
+.qipan div:nth-of-type(3) {
+  left: 300px;
+  top: 300px;
+  animation: pointer 3s ease 800ms forwards;
+}
+.qipan div:nth-of-type(4) {
+  left: 140px;
+  top: 460px;
+  animation: pointer 5s ease 1000ms forwards;
+}
+.qipan div:nth-of-type(5) {
+  left: 460px;
+  top: 460px;
+  animation: pointer 5s ease 1000ms forwards;
+}
+
+i:nth-of-type(1) {
+  top: 20px;
+  animation: diaoluo 1s ease 300ms forwards;
+}
+
+i:nth-of-type(2) {
+  top: 60px;
+  animation: diaoluo 1s ease 600ms forwards;
+}
+
+i:nth-of-type(3) {
+  top: 100px;
+  animation: diaoluo 1s ease 900ms forwards;
+}
+
+i:nth-of-type(4) {
+  top: 140px;
+  animation: diaoluo 1s ease 1200ms forwards;
+}
+
+i:nth-of-type(5) {
+  top: 180px;
+  animation: diaoluo 1s ease 1500ms forwards;
+}
+
+i:nth-of-type(6) {
+  top: 220px;
+  animation: diaoluo 1s ease 1800ms forwards;
+}
+
+i:nth-of-type(7) {
+  top: 260px;
+  animation: diaoluo 1s ease 2100ms forwards;
+}
+
+i:nth-of-type(8) {
+  top: 300px;
+  animation: diaoluo 1s ease 2400ms forwards;
+}
+
+i:nth-of-type(9) {
+  top: 340px;
+  animation: diaoluo 1s ease 2700ms forwards;
+}
+
+i:nth-of-type(10) {
+  top: 380px;
+  animation: diaoluo 1s ease 3000ms forwards;
+}
+
+i:nth-of-type(11) {
+  top: 420px;
+  animation: diaoluo 1s ease 3300ms forwards;
+}
+
+i:nth-of-type(12) {
+  top: 460px;
+  animation: diaoluo 1s ease 3600ms forwards;
+}
+
+i:nth-of-type(13) {
+  top: 500px;
+  animation: diaoluo 1s ease 3900ms forwards;
+}
+
+i:nth-of-type(14) {
+  top: 540px;
+  animation: diaoluo 1s ease 4200ms forwards;
+}
+
+i:nth-of-type(15) {
+  top: 580px;
+  animation: diaoluo 1s ease 4500ms forwards;
+}
+
+b:nth-of-type(1) {
+  left: 20px;
+  animation: fly 1s ease 300ms forwards;
+}
+
+b:nth-of-type(2) {
+  left: 60px;
+  animation: fly 1s ease 600ms forwards;
+}
+
+b:nth-of-type(3) {
+  left: 100px;
+  animation: fly 1s ease 900ms forwards;
+}
+
+b:nth-of-type(4) {
+  left: 140px;
+  animation: fly 1s ease 1200ms forwards;
+}
+
+b:nth-of-type(5) {
+  left: 180px;
+  animation: fly 1s ease 1500ms forwards;
+}
+
+b:nth-of-type(6) {
+  left: 220px;
+  animation: fly 1s ease 1800ms forwards;
+}
+
+b:nth-of-type(7) {
+  left: 260px;
+  animation: fly 1s ease 2100ms forwards;
+}
+
+b:nth-of-type(8) {
+  left: 300px;
+  animation: fly 1s ease 2400ms forwards;
+}
+
+b:nth-of-type(9) {
+  left: 340px;
+  animation: fly 1s ease 2700ms forwards;
+}
+
+b:nth-of-type(10) {
+  left: 380px;
+  animation: fly 1s ease 3000ms forwards;
+}
+
+b:nth-of-type(11) {
+  left: 420px;
+  animation: fly 1s ease 3300ms forwards;
+}
+
+b:nth-of-type(12) {
+  left: 460px;
+  animation: fly 1s ease 3600ms forwards;
+}
+
+b:nth-of-type(13) {
+  left: 500px;
+  animation: fly 1s ease 3900ms forwards;
+}
+
+b:nth-of-type(14) {
+  left: 540px;
+  animation: fly 1s ease 4200ms forwards;
+}
+
+b:nth-of-type(15) {
+  left: 580px;
+  animation: fly 1s ease 4500ms forwards;
+}
+
+@keyframes pointer {
+  from {
+    transform: translate3d(0, -1000px, 0);
+  }
+  to {
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+@keyframes diaoluo {
+  0% {
+    transform: translate3d(0, -1000px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fly {
+  0% {
+    transform: translate3d(-1000px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,196 @@
+@mixin auto{
+  margin-left: auto;
+  margin-top: auto;
+}
+
+@mixin percentage{
+  width: 100%;
+  height: 100%;
+}
+
+@mixin fullPage{
+  position:absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin widthAuto($left){
+  position: absolute;
+  left: $left;
+  right: 0;
+}
+
+@mixin centerp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centerAuto{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin centerTra{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);
+}
+
+@mixin centerMar($width,$height){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -$width/2;
+  margin-top: -$height/2;
+}
+
+@mixin circle{
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius:50%;
+}
+
+@mixin borderRadius($radius){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius:$radius;
+}
+
+$width:600px;
+$bg:'../img/timg';
+$row:15;
+$margin: 10px;
+
+*{
+  margin:0;
+  padding:0;
+  list-style: none;
+  font-style: normal;
+}
+html,body{
+  @include percentage;
+}
+body{
+  background: url("#{$bg}.jpg") center/cover;
+  overflow: hidden;
+}
+
+.qipan{
+  width: $width;
+  height: $width;
+  background: rgba(255,255,255,0.5);
+  position: relative;
+  @include centerTra;
+  .qizi{
+    margin: $margin;
+    width: $width / $row - $margin * 2;
+    height: $width / $row - $margin * 2;
+    @include circle;
+    float: left;
+    position: relative;
+    z-index: 999;
+  }
+  .hei{
+    background-color: #000;
+  }
+  .bai{
+    background-color: #EFEFEF;
+  }
+  >i{
+    width: $width - $width / $row;
+    height: 1px;
+    background-color: #333333;
+    position:absolute;
+    left: $width / $row / 2;
+    transform: translate3d(-1000px,-1000px,0);
+  }
+  >b{
+    height: $width - $width / $row;
+    width: 1px;
+    background-color: #333333;
+    position:absolute;
+    top: $width / $row / 2;
+    transform: translate3d(-1000px,-1000px,0);
+  }
+  .pointer{
+    width: $width / $row / 2 / 2;
+    height: $width / $row /2 / 2;
+    @include  circle;
+    background-color: #000000;
+    position: absolute;
+    transform: translate3d(-1000px,-1000px,0);
+    z-index: 99;
+  }
+  div:nth-of-type(1){
+    left:3.5 * $width / $row;
+    top:3.5 * $width / $row;
+    animation: pointer 2s ease 600ms forwards;
+  }
+  div:nth-of-type(2){
+    left:11.5 * $width / $row;
+    top:3.5 * $width / $row;
+    animation: pointer 2s ease 600ms forwards;
+  }
+  div:nth-of-type(3){
+    left:7.5 * $width / $row;
+    top:7.5 * $width / $row;
+    animation: pointer 3s ease 800ms forwards;
+  }
+  div:nth-of-type(4){
+    left:3.5 * $width / $row;
+    top:11.5 * $width / $row;
+    animation: pointer 5s ease 1000ms forwards;
+  }
+  div:nth-of-type(5){
+    left:11.5 * $width / $row;
+    top:11.5 * $width / $row;
+    animation: pointer 5s ease 1000ms forwards;
+  }
+}
+@for $i from 1 through $row{
+  i:nth-of-type(#{$i}){
+    top: (2 * $i - 1) * $width / $row / 2;
+    animation: diaoluo 1s ease $i * 300ms forwards;
+  }
+}
+@for $i from 1 through $row{
+  b:nth-of-type(#{$i}){
+    left: (2 * $i - 1) * $width / $row / 2;
+    animation: fly 1s ease $i * 300ms forwards;
+  }
+}
+@keyframes pointer {
+  from{
+    transform:translate3d(0,-1000px,0);
+  }
+  to{
+    transform:translate3d(-50%,-50%,0);
+  }
+}
+//动画掉落
+@keyframes diaoluo{
+  0%{
+    transform: translate3d(0,-1000px,0);
+  }
+  100%{
+    transform: translate3d(0,0,0);
+  }
+}
+@keyframes fly{
+  0%{
+    transform: translate3d(-1000px,0,0);
+  }
+  100%{
+    transform: translate3d(0,0,0);
+  }
+}
